@@ -1,12 +1,13 @@
 <template>
   <div class="container">
-    <ul class="nav">
+    <div class="nav">
       <Navbar
         v-for="element in getElements()"
         :key="element._id"
         :element="element"
+        :href="url"
       />
-    </ul>
+    </div>
     <header>
       <h1>Todo List</h1>
     </header>

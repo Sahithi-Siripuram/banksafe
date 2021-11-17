@@ -7,6 +7,7 @@
     background-color: var(--background-color);
     color: var(--main-color);
     margin: 0;
+    text-align: center;
   }
 
   /* navbar */
@@ -24,11 +25,11 @@
     color: var(--main-color);
     text-align: center;
 }
-.nav li:hover{
+.nav .navli:hover{
     background-color:var(--selection-color);
     color: var(--textselect-color);
 }
-.nav li{
+.nav .navli{
     display: inline-block;
     padding:2%;
 }

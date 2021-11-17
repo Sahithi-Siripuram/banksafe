@@ -1,5 +1,5 @@
 <template>
-  <li>{{ this.element.text }}</li>
+  <div class="navli">{{ this.element.text }}</div>
 </template>
 
 <script>
