@@ -1,13 +1,41 @@
-h1{
-    color: red;
-}
+* {
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+  }
+  body,
+  html {
+    background-color: var(--background-color);
+    color: var(--main-color);
+    margin: 0;
+  }
+
+  /* navbar */
+  :root {
+    --background-color: #FEFFDE;
+    --highlight-color: #DDFFBC;
+    --selection-color:#91C788;
+    --textselect-color:black;
+    --main-color:#52734D;
+  }
 .nav{
     list-style-type: none;
     margin: 0;
-    padding: 2%;
-    background-color: red;
+    background-color:var(--highlight-color);
+    color: var(--main-color);
+    text-align: center;
+}
+.nav li:hover{
+    background-color:var(--selection-color);
+    color: var(--textselect-color);
 }
 .nav li{
-    display: inline-flex;
-    margin:0% 2%;
+    display: inline-block;
+    padding:2%;
 }
+@media (max-width:600px){
+    .nav{
+        display:flex;
+        flex-direction: column;
+    }
+}
+/* navbar */

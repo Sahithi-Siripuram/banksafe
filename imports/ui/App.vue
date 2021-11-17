@@ -1,30 +1,37 @@
 <template>
-  <div>
-    <navbar/>
-    <h1>Welcome to Meteor!</h1>
-    <hello/>
-    <info/>
+  <div class="container">
+    <ul class="nav">
+      <Navbar
+        v-for="element in getElements()"
+        :key="element._id"
+        :element="element"
+      />
+    </ul>
+    <header>
+      <h1>Todo List</h1>
+    </header>
   </div>
 </template>
 
 <script>
-import Hello from './components/Hello.vue'
-import Info from './components/Info.vue'
-import Navbar from './components/Navbar.vue'
-import './assets/styles.css'
-
-export default {
-  components: {
-    Hello,
-    Info,
-    Navbar,
-  },
-}
-</script>
-
-<style>
-  body {
-    font-family: sans-serif;
-    padding: 10px;
+  import Navbar from "./components/Navbar.vue"
+  import "./assets/styles.css"
+  export default {
+      components: {
+        Navbar
+      },
+      data() {
+          return {};
+      },
+      methods: {
+      getElements() {
+      return [
+        { _id: 1, text: "Home" , url: "google.com"},
+        { _id: 2, text: "My Transactions", url: "google.com" },
+        { _id: 3, text: "Initiate Transaction", url: "google.com" },
+        { _id: 4, text: "My Profile", url: "google.com" }
+      ];
+    }
   }
-</style>
+};
+</script>
