@@ -5,14 +5,13 @@
         v-for="element in elements1"
         :key="element._id"
         :element="element"
-        v-on:click="display(element._id)"
       />
     </div>
     <div class="nav" v-show="!login">
-      <Loginnav
+      <Navbar
         v-for="element in elements2"
         :key="element._id"
-        v-on:click="display(element._id,$event)"
+        :element="element"
       />
     </div>
     <div v-if="navid==='home'"></div>
@@ -29,7 +28,6 @@
   export default {
       components: {
         Navbar,
-        Loginnav,
       },
       data : {
           login: true,
@@ -46,12 +44,6 @@
         { _id: 2, text: "Login"}
       ],
       },
-      methods: {
-        display(id, event){
-          console.log(id);
-          if(id===5)
-            this.login=!this.login;
-    }
-  }
-};
+      methods: {},
+  };
 </script>

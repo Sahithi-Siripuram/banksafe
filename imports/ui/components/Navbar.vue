@@ -1,5 +1,5 @@
 <template>
-  <div class="navli">{{ this.element.text}}</div>
+  <div class="navli" @click="display">{{ this.element.text}}</div>
 </template>
 
 <script>
@@ -7,6 +7,9 @@
       props: ["element"],
       data() {
       return {};
+  },
+  methods:{
+    
   }
 };
 </script>
