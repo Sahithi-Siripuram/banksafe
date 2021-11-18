@@ -19,7 +19,6 @@
     --main-color:#52734D;
   }
 .nav{
-    list-style-type: none;
     margin: 0;
     background-color:var(--highlight-color);
     color: var(--main-color);

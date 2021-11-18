@@ -1,10 +1,10 @@
 <template>
-  <div class="navli">{{ this.element.text }}</div>
+  <div class="navli">{{ this.element.text}}</div>
 </template>
 
 <script>
   export default {
-      props: ["element","url"],
+      props: ["element"],
       data() {
       return {};
   }
