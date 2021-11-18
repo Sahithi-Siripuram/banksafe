@@ -23,7 +23,6 @@
 
 <script>
   import Navbar from "./components/Navbar.vue"
-  import Loginnav from "./components/Navbar.vue"
   import "./assets/styles.css"
   export default {
       components: {
@@ -41,7 +40,7 @@
         ],
         elements2: [
         { _id: 1, text: "Home" },
-        { _id: 2, text: "Login"}
+        { _id: 2, text: "Login / Signup"}
       ],
       },
       methods: {},
