@@ -3,7 +3,11 @@
 </template>
 
 <script>
+import Login from "./Login.vue"
   export default {
+     components: {
+        Login,
+     },
       props: ["element","navid","login"],
       data() {
       return {};
@@ -18,8 +22,10 @@
         this.$emit('update:navid',"intiateTransaction");
       else if(this.element._id===4)
         this.$emit('update:navid',"myProfile");
-      else
-        this.$emit('update:login',!this.login);
+      else if(this.element.text==="Logout")
+          this.$emit('update:login',!this.login);
+      // else
+      //   <Login/>
     }
   }
 };
