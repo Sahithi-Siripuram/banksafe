@@ -22,29 +22,26 @@
         v-on:update:navid="navid=$event"
       />
     </div>
-    <div v-if="navid==='home'">
-      <Home/>
+    <div class="body">
+      <div v-if="navid==='home'"><Home/></div>
+      <div v-else-if="navid==='myTransactions'"><h1>History</h1></div>
+      <div v-else-if="navid==='intiateTransaction'"><h1>New Transaction</h1></div>
+      <div v-else><h1>My profile</h1></div>
     </div>
-    <div v-else-if="navid==='myTransactions'">
-      <h1>History</h1>
-    </div>
-    <div v-else-if="navid==='intiateTransaction'">
-      <h1>New Transaction</h1>
-    </div>
-    <div v-else>
-      <h1>My profile</h1>
-    </div>
+    <div class="footer"><Footer/></div>
   </div>
 </template>
 
 <script>
   import Navbar from "./components/Navbar.vue"
   import Home from "./components/Home.vue"
+  import Footer from "./components/Footer.vue"
   import "./assets/styles.css"
   export default {
       components: {
         Navbar,
         Home,
+        Footer,
       },
       data () {
           return{

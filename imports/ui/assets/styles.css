@@ -23,10 +23,12 @@
     background-color:var(--highlight-color);
     color: var(--main-color);
     text-align: center;
+    box-shadow: 1px 1px 2px;
 }
 .nav .navli:hover{
     background-color:var(--selection-color);
     color: var(--textselect-color);
+    box-shadow: 1px 1px 5px;
 }
 .nav .navli{
     display: inline-block;
@@ -39,3 +41,60 @@
     }
 }
 /* navbar */
+
+/* body */
+.body{
+  margin:0% 2%;
+}
+
+/* counter */
+.counter-div{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.counter{
+  width: 200px;
+  height: 200px;
+  margin: 2%;
+  background-color: var(--highlight-color);
+  border-radius: 50%;
+  box-shadow: 1px 1px 5px var(--main-color);
+  font: bold 15px/13px Helvetica, Verdana, Tahoma;
+  display: flex;
+  vertical-align: middle;
+  text-align: center;
+  align-items: center; 
+  justify-content: center;
+}
+/* counter */
+
+/* cards */
+.card-deck {
+  display: inline-flex;
+  justify-content: space-between;
+}
+.card{
+  color: var(--main-color);
+  background-color: var(--highlight-color);
+  margin: 2%;
+  padding: 2%;
+  box-shadow: 1px 1px 2px;
+}
+.card:hover {
+  box-shadow: 1px 1px 5px;
+  color: var(--textselect-color);
+}
+/* cards */
+/* footer */
+.footer{
+    background-color:var(--highlight-color);
+    color: var(--main-color);
+    text-align: center;
+    width: 100%;
+    box-shadow: 1px 1px 2px;
+    bottom: 0%;
+    position: fixed;
+}
+/* footer */
