@@ -24,8 +24,11 @@ import Login from "./Login.vue"
         this.$emit('update:navid',"myProfile");
       else if(this.element.text==="Logout")
           this.$emit('update:login',!this.login);
-      // else
-      //   <Login/>
+      else
+        this.show();
+    },
+    show(){
+      console.log("function being called");
     }
   }
 };
